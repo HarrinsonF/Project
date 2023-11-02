@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        .form-control {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="text-center">Registrarse</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="grabar">
+							<div class="form-group" hidden>
+                                <label for="email">Codigo</label>
+                                <input type="text" id="codigo" name="codigo" value="0">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="sexo">Sexo</label>
+                                <input type="text" class="form-control" id="sexo" name="sexo" required>
+                            </div>
+                            <div class="form-group" hidden>
+                                <label for="sexo">Rol</label>
+                                <input type="text" class="form-control" id="rol" name="rol" value="3">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Registrar</button>
+                            <a style="float: inline-end;" href="/login/lista">Ya tienes cuenta!?. Inicia Sesion</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script th:inline="javascript" th:if="${MENSAJE!=null}">
+		//leer atributo MENSAJE
+		let msj=/*[[${MENSAJE}]]*/
+		toastr.success(msj, toastr.options = {
+			"timeOut": "2000",
+			"positionClass " : " toast-top-right ",
+		});
+	</script>
+</body>
+</html>

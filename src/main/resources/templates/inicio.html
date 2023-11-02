@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Info</title>
+    <!-- CSS -->
+    <style>
+        .header {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hospital-info {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+        }
+        .center img {
+            width: 200px;
+            height: 200px;
+        }
+        #this {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s, transform 0.5s;
+        }
+        .button {
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Sistema de Citas Medicas</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="hospital-info">
+                    <h2>General Medical and Health Sciences City</h2>
+                    <p>Direccion: 123 Main Street, City, Country</p>
+                    <p>Telefono: (51) 965874231</p>
+                    <p>Correo: info@hospital.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <a href="#this" class="button">Ingresar a la pagina</a>
+            </div>
+        </div>
+        <div class="center" id="this">
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">Iniciar Sesion</h5>
+                  <p class="card-text">En caso de tener una cuenta activa. Inicie Sesion</p>
+                  <a href="/login/lista" class="btn btn-primary">Iniciar Sesion</a>
+              </div>
+          </div>
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">Registrarse</h5>
+                  <p class="card-text">Si no cuenta con credenciales, registrese de manera facil</p>
+                  <a href="/singup/lista" class="btn btn-primary">Registrarse</a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector('.button').addEventListener('click', function() {
+            const thisElement = document.getElementById('this');
+            thisElement.style.opacity = 1;
+            thisElement.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+
+</html>

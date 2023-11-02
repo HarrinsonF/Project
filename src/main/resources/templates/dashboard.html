@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+ crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row flex-nowrap">
+			<div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+				<div
+					class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+					<a href="Index.jsp"
+						class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+						<span class="fs-5 d-none d-sm-inline mx-auto p-2"
+						style="font-family: sans-serif;">Menú Principal</span>
+					</a>
+					<ul
+						class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+						id="menu">
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/usuario/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Usuario</span>
+							</a></li>
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/rol/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Rol</span>
+							</a></li>
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/rolEnlace/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Rol Enlace</span>
+							</a></li>
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/secretaria/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Secretaria</span>
+							</a></li>
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/doctor/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Doctor</span>
+							</a></li>
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/cita/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Cita</span>
+							</a></li>
+							<li class="nav-item" style="margin-top: 20px"><a
+								href="/boleta/lista" class="nav-link align-middle px-0"> <i
+									class="fas fa-plus"></i> <span
+									class="ms-1 d-none d-sm-inline">Boleta</span>
+							</a></li>
+					</ul>
+					<hr>
+					<div class="pb-4">
+						<a class="btn btn-outline-danger mx-auto p-2" href="/inicio/lista">Cerrar Sesion</a>
+					</div>
+				</div>
+			</div>
+	<div class="container">
+			<h3 class="text-center mt-4">HOLA :D</h3>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" 
+	crossorigin="anonymous"></script>
+	<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+	<script th:src="@{/resources/datepicker/bootstrap-datepicker.js}"></script>     
+	<script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.23/js/dataTables.bootstrap4.min.js"></script>
+	<script src="https://kit.fontawesome.com/08aaa156fb.js" crossorigin="anonymous"></script>
+	<script	src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+	<script src="https://kit.fontawesome.com/08aaa156fb.js" crossorigin="anonymous"></script>
+	<script th:src="@{/resources/alertifyjs/alertify.js}"></script>
+	<script th:src="@{/resources/alertifyjs/alertify.min.js}"></script>
+</body>
+</html>
